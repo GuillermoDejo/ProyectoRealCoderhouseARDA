@@ -1,0 +1,37 @@
+@keyframes linea {
+
+    0% {
+        background-size: 0% 3rem;
+    }
+
+    100% {
+        background-size: 100% 3rem;
+    }
+
+
+}
+@keyframes linea-tablet {
+
+    0% {
+        background-size: 0% 2.5rem;
+    }
+
+    100% {
+        background-size: 100% 2.5rem;
+    }
+
+
+}
+@keyframes linea-mobile {
+
+    0% {
+        background-size: 0% 2rem;
+    }
+
+    100% {
+        background-size: 100% 2rem;
+    }
+
+
+}
+

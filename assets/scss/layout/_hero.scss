@@ -1,0 +1,135 @@
+.hero {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: 84rem;
+    gap: 7rem;
+    
+    color: $blanco;
+    
+    
+    @include tablet {
+        
+        height: calc(100vh - 12rem);
+        justify-content: space-between;
+        gap: 0rem;
+
+    }
+
+    & .background-img {
+
+        position: absolute;
+        background-image: url('../images/todesarda.png');
+        background-size: cover;
+        background-position: center;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+
+        filter: brightness(20%) saturate(0%);
+
+    }
+
+    &__container{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6rem;
+
+        padding: 0rem 13rem;
+
+        width: 100%;
+        max-width: 1280px;
+        height: 100%;
+
+        @include tablet{
+
+            padding: 0rem 7rem;
+
+        }
+        @include mobile{
+
+            padding: 0rem 4rem;
+
+        }
+
+    }
+
+    &__titulo {
+
+        font-size: 6.4rem;
+        font-weight: $bold;
+        line-height: initial;
+        width: 100%;
+
+        @include tablet{
+
+            font-size: 6rem;
+
+        }
+
+        @include mobile {
+            font-size: 4rem;
+        }
+
+        & span {
+
+            position: relative;
+
+            background-image: linear-gradient($rojo-transparente, $rojo-transparente);
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 100% 3rem;
+
+            animation-name: linea;
+            animation-duration: 3s;
+            // animation-delay: 1s;
+            animation-iteration-count: 1;
+
+            @include tablet {
+                animation-name: linea-tablet;
+                background-size: 100% 2.5rem;
+            }
+
+            @include mobile {
+                animation-name: linea-mobile;
+                background-size: 100% 2rem;
+            }
+
+        }
+
+
+    }
+
+    &__subtitulo {
+
+        font-size: 2.8rem;
+        text-align: center;
+
+        @include tablet {
+            font-size: 2.6rem;
+        }
+
+
+    }
+
+    &__btn {
+
+        @include mobile{
+
+            font-size: 1.8rem;
+
+        }
+    }
+
+
+}
+

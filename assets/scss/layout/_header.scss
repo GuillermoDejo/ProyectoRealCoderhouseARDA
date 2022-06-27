@@ -1,0 +1,394 @@
+.header {
+
+    position: sticky;
+    background-color: $blanco;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 120px;
+
+    top: 0px;
+    z-index: 10;
+
+    &__container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 2rem;
+
+        width: 100%;
+        max-width: 1540px;
+        height: 100%;
+
+        @include tablet {
+
+            padding: 2rem 4rem;
+
+        }
+
+    }
+
+
+    & .container-logo {
+
+        // width: 24rem;
+        align-self: center;
+        height: 100%;
+
+        img {
+
+            width: auto;
+            height: 100%;
+
+        }
+
+    }
+
+    &__container-datos {
+
+        width: 100%;
+
+        padding: 0rem;
+        margin: 0;
+        margin-top: 4rem;
+
+        @include tablet {
+
+            background-color: $blanco;
+
+            position: absolute;
+            flex-direction: column;
+            align-items: center;
+
+            gap: 0;
+            top: 12rem;
+            left: 0;
+
+            margin: 0;
+            padding: 2rem 10rem;
+            margin-left: -100%;
+            transition: all .5s;
+
+            &> :last-child {
+
+
+                &> ::after {
+
+                    display: none;
+
+
+                }
+
+            }
+
+        }
+
+        @include mobile {
+
+            padding: 2rem 0rem;
+
+        }
+
+        &__btn-donar {
+
+            display: none;
+
+            @include tablet {
+
+                display: inline;
+                margin-top: 1rem ;
+                margin-bottom: 4rem ;
+
+            }
+
+            @include mobile {
+
+                font-size: 1.8rem;
+
+            }
+
+        }
+
+        &__contactos {
+
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+
+            @include tablet {
+
+                display: flex;
+            }
+
+            &> :nth-child(1) {
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+
+                p {
+
+                    font-size: 1.8rem;
+                    font-weight: $semi-bold;
+
+                }
+
+                img {
+
+                    width: 3rem;
+
+
+                }
+
+            }
+
+            &> :nth-child(2) {
+
+                display: flex;
+                align-items: center;
+                gap: 3rem;
+
+                a {
+
+                    display: block;
+                    fill: $rojo;
+                    width: 6rem;
+                    height: 6rem;
+
+                }
+
+            }
+
+        }
+
+    }
+
+    &__container-menu {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 4rem;
+
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+
+        @include tablet {
+
+
+            flex-direction: column;
+            list-style: none;
+
+            gap: 0;
+
+
+            &> :last-child {
+
+
+                &> ::after {
+
+                    display: none;
+
+
+                }
+
+            }
+
+        }
+
+        & li {
+
+            display: block;
+
+            @include tablet {
+
+                width: 100%;
+
+
+
+            }
+
+        }
+
+    }
+
+    &__container-submenu {
+
+        position: relative;
+
+        &:hover .submenu {
+            overflow: visible;
+        }
+
+        @include tablet {
+
+            padding: 0rem;
+
+            &:hover .submenu {
+                overflow: auto;
+            }
+
+            &> ::after {
+
+                content: "";
+                position: absolute;
+                height: .1rem;
+                left: 2rem;
+                right: 2rem;
+                bottom: 0;
+                background-color: $grisOscuro;
+
+
+            }
+
+        }
+
+
+        & .submenu {
+
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            height: 0;
+            overflow: hidden;
+            transition: all .3s;
+
+
+            position: absolute;
+
+            top: 100%;
+            left: 0;
+            width: 30rem;
+
+            &:hover {
+
+                background-color: $grisOscuro;
+
+            }
+
+            @include tablet {
+
+                position: static;
+                list-style: none;
+
+                width: 100%;
+
+                margin: 0;
+                padding: 0;
+                height: 0;
+                overflow: hidden;
+                transition: all .3s;
+
+            }
+
+            & li {
+
+                padding: 0rem;
+
+                & a {
+
+                    padding: 1rem 0rem 1rem 4rem;
+                    color: $negro;
+                    background-color: $gris;
+
+                    &:hover {
+
+                        background-color: $rojo;
+                        color: $blanco;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+
+
+    }
+
+    &__link {
+
+        display: flex;
+        align-items: center;
+        font-size: 1.8rem;
+        font-weight: $bold;
+        gap: .4rem;
+        color: $negro;
+        padding: 0;
+
+
+        @include tablet {
+
+            padding: 2rem 2rem;
+            justify-content: space-between;
+
+        }
+
+        & span {
+
+            transform: rotate(90deg);
+            font-size: 1.6rem;
+
+            @include tablet {
+
+                font-size: 2.4rem;
+
+            }
+
+        }
+
+    }
+
+    &__boton {
+
+        display: none;
+        font-size: 5rem;
+
+        @include tablet {
+            display: block;
+        }
+    }
+
+}
+
+.btn-donar {
+
+    position: absolute;
+    top: 0rem;
+    right: 2rem;
+
+    font-size: 1.8rem;
+
+    padding: 1rem 4rem;
+
+    z-index: -1;
+
+    @include tablet {
+        top: 12rem;
+        right: 0rem;
+    }
+
+}
+
+.show {
+
+    margin-left: 0;
+    display: flex;
+
+}
+
+.rotar {
+
+    transform: rotate(-90deg) !important;
+
+}
