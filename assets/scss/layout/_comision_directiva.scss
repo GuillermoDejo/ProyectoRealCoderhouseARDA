@@ -39,6 +39,8 @@
         &__atras {
 
             align-self: flex-start;
+            position: relative;
+            left: 80px;
 
             @include tablet {
 
