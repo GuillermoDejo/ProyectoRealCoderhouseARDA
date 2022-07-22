@@ -3309,6 +3309,11 @@ h4 {
   text-decoration: underline;
 }
 
+.visually-hidden {
+  position: absolute;
+  left: -100vw;
+}
+
 .footer {
   position: relative;
   width: 100vw;

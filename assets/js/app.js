@@ -43,9 +43,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 });
-var btn_1 = document.getElementById('btn-1');
-var btn_2 = document.getElementById('btn-2');
 
 function mostrarBoton () {
-    btn_2.style.display = 'grid';
+    var toogle = document.getElementById('toogle');
+    var btn_2 = document.getElementById('btn-2');
+    if (toogle.checked == true) {
+        btn_2.style.display = 'grid';
+    } else { 
+        btn_2.style.display = 'none';
+    }
 }
